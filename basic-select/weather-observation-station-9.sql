@@ -5,3 +5,9 @@
 SELECT DISTINCT City
 FROM Station
 WHERE LEFT(City, 1) NOT IN ('A', 'E', 'I', 'O', 'U');
+
+
+-- using regexp
+SELECT DISTINCT city
+FROM station
+WHERE city REGEXP '^[^aeiou].*';

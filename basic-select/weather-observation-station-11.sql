@@ -6,3 +6,9 @@ SELECT DISTINCT City
 FROM Station
 WHERE LEFT(City, 1) NOT IN ('A', 'E', 'I', 'O', 'U') OR
       RIGHT(City, 1) NOT IN ('A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u');
+
+-- REGEXP
+
+SELECT DISTINCT city
+FROM station
+WHERE city REGEXP '.*[^aeiou]$' OR city REGEXP '^[^aeiou].*';

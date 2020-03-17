@@ -13,3 +13,8 @@
     ORDER BY LENGTH(City) DESC, City 
     LIMIT 1
 );
+
+-- Using REGEXP
+SELECT DISTINCT city
+FROM station
+WHERE city REGEXP '^[aeiou].*[aeiou]$'
